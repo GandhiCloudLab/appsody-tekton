@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: appsody-tekton-pv-recycle
+spec:
+  capacity:
+    storage: 5Gi
+  hostPath:
+    path: /tmp/data
+    type: ''
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
